@@ -24,45 +24,45 @@
                     <label for="family">نام خانوادگی:</label>
                     <input type="text" class="form-control" id="family" name="family"/>
                 </div>
-             <div class="form-group">
+                <div class="form-group">
                     <label for="fatherName"> نام پدر:</label>
-                    <input type="text"class="form-control"id="fatherName" name="fatherName">
+                    <input type="text" class="form-control" id="fatherName" name="fatherName">
                 </div>
                 <div class="form-group">
                     <label for="idCode">کد ملی: </label>
-                    <input type="text"class="form-control"id="idCode" name="idCode">
+                    <input type="text" class="form-control" id="idCode" name="idCode">
                 </div>
                 <div class="form-group">
                     <label for="nationalCode"> شماره شناسنامه: </label>
-                    <input type="text"class="form-control"id="nationalCode" name="nationalCode">
+                    <input type="text" class="form-control" id="nationalCode" name="nationalCode">
                 </div>
                 <div class="form-group">
-                    <label for="address"> آدرس:  </label>
-                    <input type="text"class="form-control"id="address" name="address">
+                    <label for="address"> آدرس: </label>
+                    <input type="text" class="form-control" id="address" name="address">
                 </div>
                 <div class="form-group">
-                    <label for="phoneNumber"> تلفن همراه:  </label>
-                    <input type="tel"class="form-control"id="phoneNumber" name="phoneNumber">
+                    <label for="phoneNumber"> تلفن همراه: </label>
+                    <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber">
                 </div>
                 <div class="form-group">
-                    <label for="email"> ایمیل:  </label>
-                    <input type="email"class="form-control"id="email" name="email">
+                    <label for="email"> ایمیل: </label>
+                    <input type="email" class="form-control" id="email" name="email">
                 </div>
                 <div class="form-group">
-                    <label for="field"> مدرک تحصیلی:  </label>
-                    <input type="text"class="form-control"id="field" name="field">
+                    <label for="field"> مدرک تحصیلی: </label>
+                    <input type="text" class="form-control" id="field" name="field">
                 </div>
                 <div class="form-group">
-                    <label for="certificate"> رشته تحصیلی:  </label>
-                    <input type="text"class="form-control"id="certificate" name="certificate">
+                    <label for="certificate"> رشته تحصیلی: </label>
+                    <input type="text" class="form-control" id="certificate" name="certificate">
                 </div>
                 <div class="form-group">
-                    <label for="surface"> سطح:  </label>
-                    <input type="text"class="form-control"id="surface" name="surface">
+                    <label for="surface"> سطح: </label>
+                    <input type="text" class="form-control" id="surface" name="surface">
                 </div>
                 <div class="form-group">
-                    <label for="supervisor"> سرپرست:  </label>
-                    <input type="text"class="form-control"id="supervisor" name="supervisor">
+                    <label for="supervisor"> سرپرست: </label>
+                    <input type="text" class="form-control" id="supervisor" name="supervisor">
                 </div>
 
                 <input style="width: 100%" type="submit" value="ثبت" class="btn btn-info"/>
@@ -89,22 +89,55 @@
                     <tr>
                         <form action="/employee/updateEmployee">
                             <div class="form-group">
-                                <td><input class="form-control" style="width: 100%" type="text" readonly name="id" value="${employee.id}"/></td>
+                                <td><input class="form-control" style="width: 100%" type="text" readonly name="id"
+                                           value="${employee.id}"/></td>
                             </div>
                             <div class="form-group">
-                                <td><input class="form-control" style="width: 100%" type="text" name="name" value="${employee.name}"/></td>
+                                <td><input class="form-control" style="width: 100%" type="text" name="name"
+                                           value="${employee.name}"/></td>
                             </div>
                             <div class="form-group">
-                                <td><input class="form-control" style="width: 100%" type="text" name="family" value="${employee.family}"/></td>
+                                <td><input class="form-control" style="width: 100%" type="text" name="family"
+                                           value="${employee.family}"/></td>
                             </div>
                             <div class="form-group">
-                                <td><input class="form-control" style="width: 100%" type="text" name="fatherName" value="${employee.fatherName}"></td>
+                                <td><input class="form-control" style="width: 100%" type="text" name="fatherName"
+                                           value="${employee.fatherName}"></td>
                             </div>
                             <div class="form-group">
-                                <td><input class="form-control" style="width: 100%" type="text" name="idCode" value="${employee.idCode}"></td>
+                                <td><input class="form-control" style="width: 100%" type="text" name="idCode"
+                                           value="${employee.idCode}"></td>
                             </div>
+                            <div class="form-group">
+                                <td><input class="form-control" style="width: 100%" type="text" name="nationalCode"
+                                           value="${employee.nationalCode}"></td>
+                            </div>
+                            <div class="form-group">
+                                <td><input class="form-control" style="width: 100%" type="tel" name="phoneNumber"
+                                           value="${employee.phoneNumber}"></td>
+                            </div>
+                            <div class="form-group">
+                                <td><input class="form-control" style="width: 100%" type="email" name="email"
+                                           value="${employee.email}"></td>
+                            </div>
+
+                            <div class="form-group">
+                                <td><input class="form-control" style="width: 100%" type="text" name="certificate"
+                                           value="${employee.certificate}"></td>
+                            </div>
+                            <div class="form-group">
+                                <td><input class="form-control" style="width: 100%" type="text" name="surface"
+                                           value="${employee.surface}"></td>
+                            </div>
+                            <div class="form-group">
+                                <td><input class="form-control" style="width: 100%" type="text" name="supervisor"
+                                           value="${employee.supervisor}"></td>
+                            </div>
+
+
                             <td><input style="width: 100%" type="submit" value="ویرایش" class="btn btn-danger"/></td>
-                            <td><input style="width: 100%" type="button" value="حذف" onclick="removeEmployee(${employee.id})" class="btn btn-danger"/></td>
+                            <td><input style="width: 100%" type="button" value="حذف"
+                                       onclick="removeEmployee(${employee.id})" class="btn btn-danger"/></td>
                         </form>
                     </tr>
                 </c:forEach>

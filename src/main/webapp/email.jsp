@@ -47,13 +47,16 @@
                                 <td><input class="form-control" style="width: 100%" type="text" readonly name="id" value="${email.id}"/></td>
                             </div>
                             <div class="form-group">
-                                <td><input class="form-control" style="width: 100%" type="text" name="name" value="${email.subject}"/></td>
+                                <td><input class="form-control" style="width: 100%" type="text" name="senderId" value="${email.senderId}"/></td>
                             </div>
                             <div class="form-group">
-                                <td><input class="form-control" style="width: 100%" type="text" name="family" value="${email.content}"/></td>
+                                <td><input class="form-control" style="width: 100%" type="text" name="subject" value="${email.subject}"/></td>
                             </div>
-                            <td><input style="width: 100%" type="submit" value="Update" class="btn btn-danger"/></td>
-                            <td><input style="width: 100%" type="button" value="Delete" onclick="removeEmail(${email.id})" class="btn btn-danger"/></td>
+                            <div class="form-group">
+                                <td><input class="form-control" style="width: 100%" type="text" name="content" value="${email.content}"/></td>
+                            </div>
+                            <td><input style="width: 100%" type="submit" value="ویرایش" class="btn btn-danger"/></td>
+                            <td><input style="width: 100%" type="button" value="حذف" onclick="removeEmail(${email.id})" class="btn btn-danger"/></td>
                         </form>
                     </tr>
                 </c:forEach>
