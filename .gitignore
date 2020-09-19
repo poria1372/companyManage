@@ -1,0 +1,8 @@
+#idea files
+.idea/
+
+#time sheet
+.timesheet/
+
+#target
+target/
