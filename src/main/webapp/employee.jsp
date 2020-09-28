@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html>
+<html dir="rtl" lang="fa">
 <head>
     <title>Employee</title>
     <meta charset="utf-8">
@@ -67,7 +67,7 @@
 
                 <input style="width: 100%" type="submit" value="ثبت" class="btn btn-info"/>
             </form>
-            <table class="table table-hover" style="width: 100%">
+            <table class="table table-hover" style="width: 150%">
                 <tr>
                     <td>شناسه</td>
                     <td>نام</td>
@@ -75,8 +75,8 @@
                     <td>نام پدر</td>
                     <td>کد ملی</td>
                     <td> شماره شناسنامه</td>
-                    <td> تلفن همراه</td>
                     <td> آدرس</td>
+                    <td> تلفن همراه</td>
                     <td> ایمیل</td>
                     <td>مدرک تحصیلی</td>
                     <td> رشته تحصیلی</td>
@@ -113,12 +113,20 @@
                                            value="${employee.nationalCode}"></td>
                             </div>
                             <div class="form-group">
+                                <td><input class="form-control" style="width: 100%" type="text" name="address"
+                                           value="${employee.address}"></td>
+                            </div>
+                            <div class="form-group">
                                 <td><input class="form-control" style="width: 100%" type="tel" name="phoneNumber"
                                            value="${employee.phoneNumber}"></td>
                             </div>
                             <div class="form-group">
                                 <td><input class="form-control" style="width: 100%" type="email" name="email"
                                            value="${employee.email}"></td>
+                            </div>
+                            <div class="form-group">
+                                <td><input class="form-control" style="width: 100%" type="text" name="field"
+                                           value="${employee.field}"></td>
                             </div>
 
                             <div class="form-group">
@@ -130,11 +138,8 @@
                                            value="${employee.surface}"></td>
                             </div>
                             <div class="form-group">
-                                <td><input class="form-control" style="width: 100%" type="text" name="supervisor"
-                                           value="${employee.supervisor}"></td>
+                                <td><input class="form-control" style="width: 100%" type="text" name="supervisor" value="${employee.supervisor}"></td>
                             </div>
-
-
                             <td><input style="width: 100%" type="submit" value="ویرایش" class="btn btn-danger"/></td>
                             <td><input style="width: 100%" type="button" value="حذف"
                                        onclick="removeEmployee(${employee.id})" class="btn btn-danger"/></td>
@@ -147,7 +152,7 @@
 </div>
 <script>
     function removeEmployee(id) {
-        if (confirm("are you sure?")) {
+        if (confirm("آیا مطمئن هستید؟")) {
             window.location = '/employee/removeEmployee?id=' + id;
         }
     }

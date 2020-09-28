@@ -16,7 +16,7 @@ public class selectLeave extends HttpServlet {
     public void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
             req.setAttribute("list", LeaveService.getInstance().selectLeave());
-            req.getRequestDispatcher("/index.jsp").forward(req,resp);
+            req.getRequestDispatcher("/leave.jsp").forward(req,resp);
         }catch (Exception e){
             Log4j.getLogger().info("selectLeave have a exception");
         }

@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html>
+<html dir="rtl" lang="fa">
 <head>
     <title>Leave</title>
     <meta charset="utf-8">
@@ -33,8 +33,9 @@
             </form>
             <table class="table table-hover" style="width: 100%">
                 <tr>
+                    <td>شناسه</td>
                     <td>نوع مرخصی</td>
-                    <tdاز تاریخ:</td>
+                    <td>از تاریخ </td>
                     <td> تا تاریخ</td>
                     <td>ویرایش</td>
                     <td>حذف</td>
@@ -65,7 +66,7 @@
 </div>
 <script>
     function removeLeave(id) {
-        if (confirm("are you sure?")) {
+        if (confirm("آیا مطمئن هستید؟")) {
             window.location = '/leave/removeLeave?id=' + id;
         }
     }

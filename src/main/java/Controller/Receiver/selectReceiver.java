@@ -16,7 +16,7 @@ public class selectReceiver extends HttpServlet {
     public void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
             req.setAttribute("list", RecieverService.getInstance().selectReciver());
-            req.getRequestDispatcher("/index.jsp").forward(req,resp);
+            req.getRequestDispatcher("/receiver.jsp").forward(req,resp);
 
         }catch (Exception e){
             Log4j.getLogger().info("selectReceiver have a exception");

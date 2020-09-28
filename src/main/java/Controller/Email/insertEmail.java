@@ -17,7 +17,9 @@ public class insertEmail extends HttpServlet {
     public void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
             Email email = new Email();
-            email.setSenderId(req.getParameter("senderId"));
+            email.setUser(req.getParameter("user"));
+            email.setPass(req.getParameter("pass"));
+            email.setRecipient(req.getParameter("recipient"));
             email.setSubject(req.getParameter("subject"));
             email.setContent(req.getParameter("content"));
             EmailService.getInstance().insertEmail(email);

@@ -17,7 +17,7 @@ public class selectEmail  extends HttpServlet {
     public void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
             req.setAttribute("list", EmailService.getInstance().selectEmail());
-            req.getRequestDispatcher("/index.jsp").forward(req,resp);
+            req.getRequestDispatcher("/email.jsp").forward(req,resp);
 
         }catch (Exception e){
             Log4j.getLogger().info("select Email have a exception");

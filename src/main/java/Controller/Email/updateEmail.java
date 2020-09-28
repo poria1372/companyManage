@@ -15,8 +15,11 @@ import java.io.IOException;
 public class updateEmail extends HttpServlet {
     @Override
     public void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        try {
+      try {
             Email email = new Email();
+           email.setUser(req.getParameter("user"));
+            email.setPass(req.getParameter("pass"));
+            email.setRecipient(req.getParameter("recipient"));
             email.setSubject(req.getParameter("subject"));
             email.setContent(req.getParameter("content"));
             email.setId(Integer.parseInt(req.getParameter("id")));

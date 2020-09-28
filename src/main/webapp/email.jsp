@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html>
+<html dir="rtl" lang="fa">
 <head>
     <title>Email</title>
     <meta charset="utf-8">
@@ -15,26 +15,42 @@
     <div class="panel panel-primary">
         <div class="panel-heading"> ارسال ایمیل</div>
         <div class="panel-body">
-            <form action="/email/insertEmail">
-                <div class="form-group">
-                    <label for="senderId"> شناسه فرستنده</label>
-                   <input type="text" class="form-control" id="senderId" name="senderId">
-                </div>
-                <div class="form-group">
-                    <label for="subject"> موضوع: </label>
-                    <input type="text" class="form-control" id="subject" name="subject"/>
-                </div>
-                <div class="form-group">
-                    <label for="content">محتوا:</label>
-                    <input type="text" class="form-control" id="content" name="content"/>
-                </div>
+            <form action="/SendEmail" method="post">
+                <table border="0" width="35%" align="center">
+                    <div class="form-group">
+                        <label for="user">فرستنده:</label>
+                        <input type="text" class="form-control" id="user" name="user">
+                    </div>
+                    <div class="form-group">
+                        <label for="pass"> رمز ایمیل:</label>
+                        <input type="password" class="form-control" id="pass" name="pass">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient"> گیرنده:</label>
+                        <input type="text" class="form-control" id="recipient" name="recipient">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">موضوع:</label>
+                        <input type="text" class="form-control" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="content"> محتوا:</label>
+                        <textarea class="form-control" rows="10" cols="40" id="content" name="content"></textarea>
+                    </div>
+                    <tr>
+                        <div class="form-group">
+                            <td colspan="2" align="center"><input type="submit" value="ارسال"/></td>
+                        </div>
+                    </tr>
+                </table>
 
-
-                <input style="width: 100%" type="submit" value="ارسال" class="btn btn-info"/>
             </form>
             <table class="table table-hover" style="width: 100%">
                 <tr>
                     <td>شناسه</td>
+                    <td> فرستنده</td>
+                    <td> رمز ایمیل</td>
+                    <td> گیرنده</td>
                     <td>موضوع</td>
                     <td> محتوا</td>
                     <td>ویرایش</td>
@@ -47,7 +63,13 @@
                                 <td><input class="form-control" style="width: 100%" type="text" readonly name="id" value="${email.id}"/></td>
                             </div>
                             <div class="form-group">
-                                <td><input class="form-control" style="width: 100%" type="text" name="senderId" value="${email.senderId}"/></td>
+                                <td><input class="form-control" style="width: 100%" type="text" name="user" value="${email.user}"/></td>
+                            </div>
+                            <div class="form-group">
+                                <td><input class="form-control" style="width: 100%" type="text" name="pass" value="${email.pass}"/></td>
+                            </div>
+                            <div class="form-group">
+                                <td><input class="form-control" style="width: 100%" type="text" name="recipient" value="${email.recipient}"/></td>
                             </div>
                             <div class="form-group">
                                 <td><input class="form-control" style="width: 100%" type="text" name="subject" value="${email.subject}"/></td>
@@ -66,7 +88,7 @@
 </div>
 <script>
     function removeEmail(id) {
-        if (confirm("are you sure?")) {
+        if (confirm("آیا مطمئن هستید؟")) {
             window.location = '/email/removeEmail?id=' + id;
         }
     }

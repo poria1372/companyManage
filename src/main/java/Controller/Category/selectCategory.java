@@ -16,7 +16,7 @@ public class selectCategory extends HttpServlet {
     public void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
             req.setAttribute("list", CategoryService.getInstance().selectCategory());
-            req.getRequestDispatcher("/index.jsp").forward(req, resp);
+            req.getRequestDispatcher("/category.jsp").forward(req, resp);
 
         } catch (Exception e) {
             Log4j.getLogger().info("selectCategory have a exception");

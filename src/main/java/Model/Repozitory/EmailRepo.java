@@ -3,9 +3,12 @@ package Model.Repozitory;
 import Common.JPA;
 import Model.Entity.Email;
 
+import javax.mail.Authenticator;
+import javax.mail.PasswordAuthentication;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import java.util.List;
+import java.util.Properties;
 
 public class EmailRepo {
     private static EmailRepo service = new EmailRepo();
@@ -25,6 +28,7 @@ public class EmailRepo {
 
         entityTransaction.commit();
         entityManager.close();
+
     }
 
     public void updateEmail(Email email) {

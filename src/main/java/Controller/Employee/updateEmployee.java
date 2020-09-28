@@ -18,7 +18,7 @@ public class updateEmployee extends HttpServlet {
     public void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
             Employee employee = new Employee();
-            employee.setId(Integer.parseInt(req.getParameter("Id")));
+            employee.setId(Integer.parseInt(req.getParameter("id")));
             employee.setName(req.getParameter("name"));
             employee.setFamily(req.getParameter("family"));
             employee.setFatherName(req.getParameter("fatherName"));

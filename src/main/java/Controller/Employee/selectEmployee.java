@@ -17,7 +17,7 @@ public class selectEmployee extends HttpServlet {
     public void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
             req.setAttribute("list", EmployeeService.getInstance().selectEmployee());
-            req.getRequestDispatcher("/index.jsp").forward(req, resp);
+            req.getRequestDispatcher("/employee.jsp").forward(req, resp);
 
         } catch (Exception e) {
             Log4j.getLogger().info("selectEmployee have a exception");

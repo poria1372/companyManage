@@ -12,15 +12,21 @@ public class Email {
     @Column(name="ID",columnDefinition = "number")
     private int id;
 
-    @Column(columnDefinition = "varchar2(10)")
-    private String senderId;
+    @Column(columnDefinition = "varchar2(100)")
+    private String user;
+
+    @Column(columnDefinition = "varchar2(max)")
+    private String pass;
+
+    @Column(columnDefinition = "varchar2(100)")
+    private String recipient;
 
     @Column(columnDefinition = "varchar2(400)")
     private String subject;
 
-
-    @Column(columnDefinition = "varchar2(1000)")
+    @Column(columnDefinition = "varchar2(max)")
     private String content;
+
 
     @ManyToOne
     @JoinColumn(name = "Sende_Employee_id")
@@ -41,12 +47,30 @@ public class Email {
         return this;
     }
 
-    public String getSenderId() {
-        return senderId;
+    public String getUser() {
+        return user;
     }
 
-    public Email setSenderId(String senderId) {
-        this.senderId = senderId;
+    public Email setUser(String user) {
+        this.user = user;
+        return this;
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    public Email setPass(String pass) {
+        this.pass = pass;
+        return this;
+    }
+
+    public String getRecipient() {
+        return recipient;
+    }
+
+    public Email setRecipient(String recipient) {
+        this.recipient = recipient;
         return this;
     }
 
