@@ -138,7 +138,8 @@
                                            value="${employee.surface}"></td>
                             </div>
                             <div class="form-group">
-                                <td><input class="form-control" style="width: 100%" type="text" name="supervisor" value="${employee.supervisor}"></td>
+                                <td><input class="form-control" style="width: 100%" type="text" name="supervisor"
+                                           value="${employee.supervisor}"></td>
                             </div>
                             <td><input style="width: 100%" type="submit" value="ویرایش" class="btn btn-danger"/></td>
                             <td><input style="width: 100%" type="button" value="حذف"
